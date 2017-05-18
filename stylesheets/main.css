@@ -1,0 +1,163 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* Custom styles */
+
+.bgimg {
+  background-image: url("../images/fwwu-forest2.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+	font-size: 50px;
+  margin-top: 15px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 36%;
+  left: 45%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.middle h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.middle p {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+hr {
+  margin: auto;
+  width: 50%;
+}
+
+small {
+  font-size: 15px;
+  color: #808080;
+}
+
+h1, p, hr, small {
+  opacity: 0.7;
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+/*
+  ========================================
+  social-media-icons
+  ========================================
+*/
+
+.social-media-icons ul {
+  display: flex;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.social-media-icons ul li {
+  list-style: none;
+}
+
+.social-media-icons ul li a {
+  /*width: 40px;
+  height: 40px;*/
+  /*background-color: #fff;*/
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+  text-align: center;
+  line-height: 20px;
+  font-size: 35px;
+  margin: 0 30px;
+  /*padding: 8px 8px 1px 7px;*/
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-media-icons ul li a:last-child {
+  margin-right: 0;
+}
+
+ul li a .fa {
+  position: relative;
+  color: #808080;
+  transition: .5s;
+}
+
+ul li a:hover .fa {
+  transform: rotateY(360deg);
+}
