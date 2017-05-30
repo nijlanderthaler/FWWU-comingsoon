@@ -53,34 +53,41 @@ body, html {
 
 /* Custom styles */
 
+:root {
+  font-size: 16px;
+}
+
 .bgimg {
   background-image: url("../images/fwwu-forest2.jpg");
-  height: 100%;
+	height: 100%;
   background-position: center;
   background-size: cover;
   color: white;
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  /*font-size: 1.5625rem; /* 25px */
 }
 
 .topleft {
   position: absolute;
   top: 0;
   left: 16px;
-	font-size: 50px;
+	font-size: 3.125rem; /*50px*/
   margin-top: 15px;
+  /*border: 1px solid white;*/
 }
 
 .bottomleft {
   position: absolute;
   bottom: 0;
   left: 16px;
+  /*border: 1px solid white;*/
 }
 
 .bottomright {
   position: absolute;
   bottom: 0;
   right: 16px;
+  /*border: 1px solid white;*/
 }
 
 .middle {
@@ -89,16 +96,19 @@ body, html {
   left: 45%;
   transform: translate(-50%,-50%);
   text-align: center;
+  /*border: 1px solid white;*/
 }
 
 .middle h1 {
-  font-size: 40px;
+  font-size: 2.5rem; /*40px*/
   margin-bottom: 10px;
+  /*border: 1px solid white;*/
 }
 
 .middle p {
-  font-size: 20px;
+  font-size: 1.25rem;/*20px*/
   margin-top: 15px;
+  /*border: 1px solid white;*/
 }
 
 hr {
@@ -107,13 +117,14 @@ hr {
 }
 
 small {
-  font-size: 15px;
+  font-size: 0.9375rem; /*15px*/
   color: #808080;
+  /*border: 1px solid white;*/
 }
 
 h1, p, hr, small {
-  opacity: 0.7;
-  filter: alpha(opacity=70); /* For IE8 and earlier */
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 /*
@@ -126,26 +137,29 @@ h1, p, hr, small {
   display: flex;
   position: relative;
   margin-bottom: 8px;
+  /*border: 1px solid white;*/
 }
 
 .social-media-icons ul li {
   list-style: none;
+  /*border: 1px solid white;*/
 }
 
 .social-media-icons ul li a {
   /*width: 40px;
-  height: 40px;*/
-  /*background-color: #fff;*/
+  height: 40px;
+  background-color: #fff;*/
   opacity: 0.4;
   filter: alpha(opacity=40); /* For IE8 and earlier */
   text-align: center;
   line-height: 20px;
-  font-size: 35px;
+  font-size: 3em;/*35px*/
   margin: 0 30px;
   /*padding: 8px 8px 1px 7px;*/
   display: block;
   position: relative;
   overflow: hidden;
+  /*border: 1px solid white;*/
 }
 
 .social-media-icons ul li a:last-child {
@@ -156,8 +170,85 @@ ul li a .fa {
   position: relative;
   color: #808080;
   transition: .5s;
+  /*border: 1px solid white;*/
 }
 
 ul li a:hover .fa {
   transform: rotateY(360deg);
+}
+
+/* Media Queries */
+
+/* Tablets and mobile */
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .bgimg {
+    background-image: url("../images/fwwu-forestalbumcover.jpg");
+  }
+  .middle {
+    top: 36%;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 737px) {
+  .topleft {
+    font-size: 1.875rem; /*30px*/
+  }
+
+  .middle h1 {
+    font-size: 1.5625rem; /*25px*/
+  }
+
+  .middle p {
+    font-size: 0.9375rem; /*15px*/
+  }
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+  .topleft {
+    font-size: 1.5625rem; /*25px*/
+  }
+
+  .middle h1 {
+    font-size: 1.25rem; /*20px*/
+  }
+
+  .middle p {
+    font-size: 0.75rem; /*12px*/
+  }
+
+  .social-media-icons ul li a {
+    font-size: 2.5em;
+  }
+
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 439px) {
+  .bottomright {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    /*border: 1px solid white;*/
+  }
+
+  .social-media-icons ul {
+    display: block;
+    position: relative;
+    margin-bottom: 8px;
+    /*border: 1px solid white;*/
+  }
+
+  .social-media-icons ul li a {
+    margin: 7px 15px;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  .social-media-icons ul li a {
+    font-size: 2.5em;
+  }
 }
