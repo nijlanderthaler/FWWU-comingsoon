@@ -64,6 +64,7 @@ body, html {
   background-size: cover;
   color: white;
   font-family: "Courier New", Courier, monospace;
+  /*font-family: 'Droid Sans Mono', monospace;*/
   /*font-size: 1.5625rem; /* 25px */
 }
 
@@ -71,8 +72,8 @@ body, html {
   position: absolute;
   top: 0;
   left: 16px;
-	font-size: 3.125rem; /*50px*/
-  margin-top: 15px;
+	font-size: 3rem; /*50px*/
+  margin-top: 12px;/*15px*/
   /*border: 1px solid white;*/
 }
 
@@ -80,6 +81,9 @@ body, html {
   position: absolute;
   bottom: 0;
   left: 16px;
+  margin-bottom: 4px;
+  font-size: 1rem; /*15px/0.9325rem*/
+  color: #808080;
   /*border: 1px solid white;*/
 }
 
@@ -100,14 +104,14 @@ body, html {
 }
 
 .middle h1 {
-  font-size: 2.5rem; /*40px*/
+  font-size: 2rem; /*40px/2.5rem*/
   margin-bottom: 10px;
   /*border: 1px solid white;*/
 }
 
 .middle p {
   font-size: 1.25rem;/*20px*/
-  margin-top: 15px;
+  margin-top: 10px;/*15px*/
   /*border: 1px solid white;*/
 }
 
@@ -116,22 +120,12 @@ hr {
   width: 50%;
 }
 
-small {
-  font-size: 0.9375rem; /*15px*/
-  color: #808080;
-  /*border: 1px solid white;*/
-}
-
 h1, p, hr, small {
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-/*
-  ========================================
-  social-media-icons
-  ========================================
-*/
+/* social-media-icons */
 
 .social-media-icons ul {
   display: flex;
@@ -179,11 +173,11 @@ ul li a:hover .fa {
 
 /* Media Queries */
 
-/* Tablets and mobile */
+/* Tablets and mobile landscape*/
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   .bgimg {
-    background-image: url("../images/fwwu-forestalbumcover.jpg");
+    background-image: url("../images/fwwu-forestalbumcover2.jpg");
   }
   .middle {
     top: 36%;
@@ -197,13 +191,17 @@ ul li a:hover .fa {
   }
 
   .middle h1 {
-    font-size: 1.5625rem; /*25px*/
+    font-size: 1.3rem; /*25px/1.5625rem*/
+    margin-bottom: 6px;
   }
 
   .middle p {
-    font-size: 0.9375rem; /*15px*/
+    font-size: 1rem; /*15px*/
+    margin-top: 7px;
   }
 }
+
+/* Mobile */
 
 @media only screen and (max-width: 568px) and (orientation: landscape) {
   .topleft {
@@ -211,11 +209,13 @@ ul li a:hover .fa {
   }
 
   .middle h1 {
-    font-size: 1.25rem; /*20px*/
+    font-size: 1.1rem; /*20px/1.25rem*/
+    margin-bottom: 6px;
   }
 
   .middle p {
     font-size: 0.75rem; /*12px*/
+    margin-top: 7px;
   }
 
   .social-media-icons ul li a {
@@ -224,9 +224,7 @@ ul li a:hover .fa {
 
 }
 
-/* Mobile */
-
-@media only screen and (max-width: 439px) {
+@media only screen and (max-width: 507px) { /*439px/569px (breekpunt: icons)*/
   .bottomright {
     position: absolute;
     bottom: 0px;
@@ -242,7 +240,8 @@ ul li a:hover .fa {
   }
 
   .social-media-icons ul li a {
-    margin: 7px 15px;
+    margin: 7px 0; /* 15px */
+
   }
 
 }
@@ -251,4 +250,17 @@ ul li a:hover .fa {
   .social-media-icons ul li a {
     font-size: 2.5em;
   }
+
+  .middle h1 {
+    margin-bottom: 6px;
+  }
+
+  .middle p {
+    margin-top: 8px;
+  }
+
+  .bottomleft {
+    font-size: 0.8rem;
+  }
+
 }
