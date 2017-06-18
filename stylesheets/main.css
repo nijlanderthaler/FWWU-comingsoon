@@ -64,6 +64,7 @@ body, html {
   background-size: cover;
   color: white;
   font-family: "Courier New", Courier, monospace;
+  position: relative; /* evalueer deze goed; later toegevoegd */
   /*font-family: 'Droid Sans Mono', monospace;*/
   /*font-size: 1.5625rem; /* 25px */
 }
@@ -74,7 +75,13 @@ body, html {
   left: 16px;
 	font-size: 3rem; /*50px*/
   margin-top: 12px;/*15px*/
-  /*border: 1px solid white;*/
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  margin-top: 12px;
 }
 
 .bottomleft {
@@ -91,40 +98,97 @@ body, html {
   position: absolute;
   bottom: 0;
   right: 16px;
-  /*border: 1px solid white;*/
 }
 
 .middle {
   position: absolute;
-  top: 36%;
-  left: 45%;
-  transform: translate(-50%,-50%);
+  left: 38%;
+  top: 30%;
   text-align: center;
-  /*border: 1px solid white;*/
 }
 
 .middle h1 {
-  font-size: 2rem; /*40px/2.5rem*/
-  margin-bottom: 10px;
-  /*border: 1px solid white;*/
+  font-size: 2.2rem; /*40px/2.5rem*/
+  margin-bottom: 5px;
 }
 
 .middle p {
-  font-size: 1.25rem;/*20px*/
-  margin-top: 10px;/*15px*/
-  /*border: 1px solid white;*/
+  font-size: 1.3rem;/*20px*/
+  margin-top: 7px;
+  margin-left: 5px;
 }
 
-hr {
+.middle hr {
   margin: auto;
   width: 50%;
+}
+
+#content {
+  position: absolute;
+  left: 38%;
+  top: 8%;
+  font-size: 1.1rem;
+  max-height: 0;
+  overflow: hidden;
+
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+#content.open {
+  max-height: 29%;
+
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+#content p {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  -ms-column-gap: 20px;
+  -o-column-gap: 20px;
+  column-gap: 20px;
+  -webkit-column-rule: 1px solid #fff;
+  -moz-column-rule: 1px solid #fff;
+  -ms-column-rule: 1px solid #fff;
+  -o-column-rule: 1px solid #fff;
+  column-rule: 1px solid #fff;
+  text-align: justify;
+  opacity: 0.7;
+}
+
+#button {
+  width: auto;
+  text-align: center;
+  display: block;
+  font-size: 1.3rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  opacity: 0.6;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.topright:hover {
+  right: 15px;
+  margin-top: 11px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.23), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 h1, p, hr, small {
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
-
 /* social-media-icons */
 
 .social-media-icons ul {
@@ -140,20 +204,15 @@ h1, p, hr, small {
 }
 
 .social-media-icons ul li a {
-  /*width: 40px;
-  height: 40px;
-  background-color: #fff;*/
   opacity: 0.4;
   filter: alpha(opacity=40); /* For IE8 and earlier */
   text-align: center;
   line-height: 20px;
   font-size: 3em;/*35px*/
   margin: 0 30px;
-  /*padding: 8px 8px 1px 7px;*/
   display: block;
   position: relative;
   overflow: hidden;
-  /*border: 1px solid white;*/
 }
 
 .social-media-icons ul li a:last-child {
@@ -164,7 +223,6 @@ ul li a .fa {
   position: relative;
   color: #808080;
   transition: .5s;
-  /*border: 1px solid white;*/
 }
 
 ul li a:hover .fa {
