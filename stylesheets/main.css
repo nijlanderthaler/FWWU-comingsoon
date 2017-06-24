@@ -86,25 +86,28 @@ body, html {
   top: 0;
   right: 16px;
   margin-top: 12px;
+  border-radius: 4px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.23), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .topright:hover {
   right: 15px;
   margin-top: 13px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.23), 0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #button {
   width: auto;
   text-align: center;
   display: block;
+  background: #94a093;
   font-size: 1.3rem;
-  padding: 2px 6px;
+  padding: 4px 7px 3px 9px;
   border-radius: 4px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: pointer;
-  border: 1px solid #fff;
+  /*border: 1px solid #fff;*/
 }
 
 /* Lower left Styles */
@@ -120,25 +123,29 @@ body, html {
 
 /* ==== Middle Section Styles ==== */
 
-.middle {
+#middle {
   position: absolute;
-  left: 38%;
-  top: 30%;
+  left: 37%;
+  top: 29%;
   text-align: center;
 }
 
-.middle h1 {
+#middle.open {
+  display: none;
+}
+
+#middle h1 {
   font-size: 2.2rem; /*40px/2.5rem*/
   margin-bottom: 5px;
 }
 
-.middle p {
+#middle p {
   font-size: 1.3rem;/*20px*/
   margin-top: 7px;
   margin-left: 5px;
 }
 
-.middle hr {
+#middle hr {
   margin: auto;
   width: 50%;
 }
@@ -148,8 +155,8 @@ de coming-soon sectie moet dan verdwijnen */
 
 #content {
   position: absolute;
-  left: 27%; /*38%*/
-  top: 4%;/*8%*/
+  left: 27%;
+  top: 4%;
   right: 13%;
   font-size: 1.1rem;
   max-height: 0;
@@ -162,7 +169,7 @@ de coming-soon sectie moet dan verdwijnen */
 }
 
 #content.open {
-  max-height: 29%;
+  max-height: 35%;
 
   -webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
@@ -210,7 +217,6 @@ h1, p, hr, small {
 
 .social-media-icons ul li {
   list-style: none;
-  /*border: 1px solid white;*/
 }
 
 .social-media-icons ul li a {
@@ -218,7 +224,7 @@ h1, p, hr, small {
   filter: alpha(opacity=40); /* For IE8 and earlier */
   text-align: center;
   line-height: 20px;
-  font-size: 3em;/*35px*/
+  font-size: 3em;
   margin: 0 30px;
   display: block;
   position: relative;
@@ -241,30 +247,35 @@ ul li a:hover .fa {
 
 /* Media Queries */
 
+@media screen and (max-width: 1000px) {
+  #middle {
+    left: 36%;
+  }
+}
+
 /* Tablets and mobile landscape*/
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   .bgimg {
     background-image: url("../images/fwwu-forestalbumcover2.jpg");
   }
-  .middle {
-    top: 36%;
+  #middle {
+    top: 32%;
     left: 35%;
   }
-}
 
-@media only screen and (max-width: 737px) {
+/*@media only screen and (max-width: 737px) {*/
   .topleft {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
-  .middle h1 {
-    font-size: 1.9rem;
+  #middle h1 {
+    font-size: 2rem;
     margin-bottom: 6px;
   }
 
-  .middle p {
-    font-size: 1.4rem;
+  #middle p {
+    font-size: 1.6rem;
     margin-top: 7px;
   }
 }
@@ -274,16 +285,16 @@ ul li a:hover .fa {
     font-size: 2rem;
   }
 
-  .middle {
+  #middle {
     top: 27%;
   }
 
-  .middle h1 {
+  #middle h1 {
     font-size: 1.4rem;
     margin-bottom: 6px;
   }
 
-  .middle p {
+  #middle p {
     font-size: 1rem;
     margin-top: 7px;
   }
@@ -296,12 +307,12 @@ ul li a:hover .fa {
     font-size: 1.5625rem;
   }
 
-  .middle h1 {
+  #middle h1 {
     font-size: 1.1rem;
     margin-bottom: 6px;
   }
 
-  .middle p {
+  #middle p {
     font-size: 0.75rem;
     margin-top: 7px;
   }
@@ -315,7 +326,7 @@ ul li a:hover .fa {
 @media only screen and (max-width: 507px) { /*439px/569px (breekpunt: icons)*/
   .bottomright {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     right: 10px;
   }
 
@@ -330,31 +341,47 @@ ul li a:hover .fa {
 
 }
 
-@media only screen and (max-width: 414px) {
-   .middle {
-     top: 33%;
+@media only screen and (max-width: 438px) {
+   #middle {
+     top: 32%;
      left: 27%;
    }
+
+   #middle h1 {
+     font-size: 1.8rem;
+     margin-bottom: 6px;
+   }
+
+   #middle p {
+     font-size: 1.4rem;
+     margin-top: 7px;
+   }
 }
+
+/* iPhone 5 and 4" screens */
 
 @media only screen and (max-width: 320px) {
   .social-media-icons ul li a {
     font-size: 2.5em;
   }
 
-  .middle {
-    top: 33%;
-    left: 28%;
+  .topleft {
+    font-size: 2.1rem;
   }
 
-  .middle h1 {
+  #middle {
+    top: 31%;
+    left: 27%;
+  }
+
+  #middle h1 {
     margin-bottom: 6px;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
-  .middle p {
+  #middle p {
     margin-top: 8px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .bottomleft {
