@@ -122,19 +122,19 @@ body, html {
   color: #808080;
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
-  text-shadow: 1px 0px 8px rgba(150, 150, 150, 0.7);
+  text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
 }
 
 /* ==== Middle Section Styles ==== */
 
 #middle {
   position: absolute;
+  top: 27%;
   left: 37%;
-  top: 29%;
   text-align: center;
   opacity: 0.4;
   filter: alpha(opacity=40); /* For IE8 and earlier */
-  text-shadow: 1px 0px 8px rgba(150, 150, 150, 0.7);
+  text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
 }
 
 #middle.open {
@@ -160,23 +160,27 @@ body, html {
 #content {
   position: absolute;
   top: 19%;
-  left: 16px;
+  /*left: 16px;*/
+  left: 50%;
+  transform: translateX(-50%);
   right: 16px;
   font-size: 1.1rem;
   max-height: 0;
   overflow: hidden;
   opacity: 0.7;
   filter: alpha(opacity=70); /* For IE8 and earlier */
-  text-shadow: 1px 0px 8px rgba(150, 150, 150, 0.7);
+  text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
+  min-width: 300px;
+  /*border: 1px solid #fff;*/
 
-  -webkit-transition: max-height 0.5s;
+  /*-webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
   -o-transition: max-height 0.5s;
-  transition: max-height 0.5s;
+  transition: max-height 0.5s;*/
 }
 
 #content.open {
-  max-height: 35%;
+  max-height: 40%;
 
   -webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
@@ -184,7 +188,7 @@ body, html {
   transition: max-height 0.5s;
 }
 
-#content p {
+/*#content p {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   -ms-column-count: 3;
@@ -201,6 +205,10 @@ body, html {
   -o-column-rule: 1px solid #fff;
   column-rule: 1px solid #fff;
   text-align: justify;
+}*/
+
+#content p {
+  padding: 5px;
 }
 
 /* ==== Lower Right / social-media-icons ==== */
@@ -270,7 +278,7 @@ ul li a:hover .fa {
   }
 
   #middle {
-    top: 29%;
+    top: 27%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -281,7 +289,7 @@ ul li a:hover .fa {
   }
 
   #middle p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-top: 7px;
   }
 
@@ -338,7 +346,7 @@ ul li a:hover .fa {
   }
 
   .social-media-icons ul li a {
-    margin: 7px 0; /* 15px */
+    margin: 7px 0;
   }
 
   #content {
@@ -360,7 +368,7 @@ ul li a:hover .fa {
    }
 
    #middle p {
-     font-size: 1.4rem;
+     font-size: 1.3rem;
      margin-top: 7px;
    }
 
