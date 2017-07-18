@@ -147,7 +147,7 @@ body, html {
 }
 
 #middle p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: 7px;
   margin-left: 5px;
 }
@@ -159,33 +159,36 @@ body, html {
 
 #content {
   position: absolute;
-  top: 19%;
-  /*left: 16px;*/
+  top: 16%;
   left: 50%;
   transform: translateX(-50%);
-  right: 16px;
+  background-color: rgba(106, 117, 106, 0.2);
   font-size: 1.1rem;
   max-height: 0;
   overflow: hidden;
   opacity: 0.7;
   filter: alpha(opacity=70); /* For IE8 and earlier */
   text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
-  min-width: 300px;
+  min-width: 600px;
+  text-align: justify;
+  border-radius: 4px; /* box-shadow? */
   /*border: 1px solid #fff;*/
-
-  /*-webkit-transition: max-height 0.5s;
-  -moz-transition: max-height 0.5s;
-  -o-transition: max-height 0.5s;
-  transition: max-height 0.5s;*/
 }
 
 #content.open {
-  max-height: 40%;
+  max-height: 48%;
 
   -webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
   -o-transition: max-height 0.5s;
   transition: max-height 0.5s;
+}
+
+#content p {
+  margin-bottom: 5px;
+  padding: 7px;
+  letter-spacing: 0.5px;
+  line-height: 1.3rem;
 }
 
 /*#content p {
@@ -206,10 +209,6 @@ body, html {
   column-rule: 1px solid #fff;
   text-align: justify;
 }*/
-
-#content p {
-  padding: 5px;
-}
 
 /* ==== Lower Right / social-media-icons ==== */
 
@@ -254,51 +253,36 @@ ul li a:hover .fa {
   transform: rotateY(360deg);
 }
 
-/* Media Queries */
+/* === Media Queries landscape === */
 
-@media screen and (max-width: 1024px) {
+/* Large screens ( > 1200px) */
+
+/* Medium screens (iPad, 13" laptop) */
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
   #middle {
     left: 36%;
   }
 
   #content {
-    top: 21%;
+    top: 17%;
+    min-width: 400px;
+    font-size: 1rem;
+    overflow-y: scroll;
   }
 }
 
-/* Tablets and mobile (iPhone 6 + 6 plus and similar) landscape*/
+/* 7" tablets */
 
-@media only screen and (max-width: 768px) and (orientation: portrait) {
-  .bgimg {
-    background-image: url("../images/fwwu-forestalbumcover2.jpg");
-  }
-
-  .topleft {
-    font-size: 2.3rem;
-  }
-
-  #middle {
-    top: 27%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #middle h2 {
-    font-size: 2rem;
-    margin-bottom: 6px;
-  }
-
-  #middle p {
-    font-size: 1.5rem;
-    margin-top: 7px;
-  }
-
+@media only screen and (max-width: 960px) and (orientation: landscape) {
   #content {
-    top: 13%;
+    top: 20%;
   }
 }
 
-@media only screen and (max-width: 737px) and (orientation: landscape) {
+/* Mobile screens (iPhone 6 + similar, phablets) */
+
+@media only screen and (max-width: 740px) and (orientation: landscape) {
   .topleft {
     font-size: 2rem;
   }
@@ -322,62 +306,25 @@ ul li a:hover .fa {
   }
 
   #content {
-    top: 23%;
+    top: 24%;
+    left: 16px;
+    right: 16px;
+    transform: none;
+  }
+
+  #content.open {
+    max-height: 55%;
   }
 
   #content p  {
-    font-size: 1rem;
+    margin-bottom: 3px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1px;
+    line-height: 1rem;
   }
 }
 
-/* Mobile icons */
-
-@media only screen and (max-width: 507px) { /*439px/569px (breekpunt: icons)*/
-
-  .bottomright {
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-  }
-
-  .social-media-icons ul {
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  .social-media-icons ul li a {
-    margin: 7px 0;
-  }
-
-  #content {
-    right: 25%;
-  }
-
-}
-
-@media only screen and (max-width: 438px) {
-   #middle {
-     top: 29%;
-     left: 50%;
-     transform: translateX(-50%);
-   }
-
-   #middle h2 {
-     font-size: 1.8rem;
-     margin-bottom: 6px;
-   }
-
-   #middle p {
-     font-size: 1.3rem;
-     margin-top: 7px;
-   }
-
-   #content {
-     top: 17%;
-   }
-}
-
-/* iPhone 5 and 4" screens */
+/* small mobile screens (iPhone 5/SE and 4" screens) */
 
 @media only screen and (max-width: 568px) and (orientation: landscape) {
   .topleft {
@@ -399,15 +346,117 @@ ul li a:hover .fa {
     margin: 0 25px;
   }
 
+  .bottomleft {
+    font-size: 0.7rem;
+  }
+
   #button {
     font-size: 1.7rem;
   }
 
-  #content p  {
-    font-size: 0.75rem;
+  #content {
+    top: 22%;
+  }
+}
+
+/* === Media Queries portrait === */
+
+/* Large screens ( > 1024px) */
+
+
+
+/* Medium screens (iPad + mini + pro split-screen) */
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .bgimg {
+    background-image: url("../images/fwwu-forestalbumcover2.jpg");
   }
 
+  .topleft {
+    font-size: 2.3rem;
+  }
+
+  #middle {
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #middle h2 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+
+  #middle p {
+    font-size: 1.4rem;
+    margin-top: 7px;
+  }
+
+  #content {
+    top: 13%;
+    left: 16px;
+    right: 16px;
+    min-width: 400px;
+    transform: none;
+    overflow-y: scroll;
+  }
 }
+
+/* Mobile icons */
+
+@media only screen and (max-width: 550px) { /* (breekpunt icons)*/
+
+  .bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+
+  .social-media-icons ul {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .social-media-icons ul li a {
+    margin: 7px 0;
+  }
+
+  #content {
+    right: 22%;
+  }
+}
+
+/* Mobile screens (iPhone 6 + similar, phablets) */
+
+@media only screen and (max-width: 480px) {
+   #middle {
+     top: 29%;
+     left: 50%;
+     transform: translateX(-50%);
+   }
+
+   #middle h2 {
+     font-size: 1.8rem;
+     margin-bottom: 6px;
+   }
+
+   #middle p {
+     font-size: 1.3rem;
+     margin-top: 7px;
+   }
+
+   #content {
+     top: 16%;
+     min-width: 200px;
+     text-align: left;
+   }
+
+   #content.open {
+     max-height: 77%;
+   }
+}
+
+/* small mobile screens (iPhone 5/SE and 4" screens) */
 
 @media only screen and (max-width: 320px) {
   .social-media-icons ul li a {
@@ -442,5 +491,4 @@ ul li a:hover .fa {
   #content p {
     font-size: 1rem;
   }
-
 }
