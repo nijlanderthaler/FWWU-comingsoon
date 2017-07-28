@@ -1,12 +1,9 @@
-// toggle between content and middle classes, middle for announcement and
-// content for additional information. The idea is that the page should reflect
-// the album designs expansiveness on first view.
-var content = document.getElementById('content');
-var middle = document.getElementById('middle');
 var button = document.getElementById('button');
 
-
 button.onclick = function() {
+    var content = document.getElementById('content');
+    var middle = document.getElementById('middle');
+
     if (content.className == 'open' && middle.className == 'open') {
         content.className = '';
         middle.className = '';

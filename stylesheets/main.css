@@ -64,7 +64,6 @@ body, html {
   background-size: cover;
   color: white;
   font-family: "Courier New", Courier, monospace;
-  /*position: relative; /* evalueer deze goed; later toegevoegd */
 }
 
 /* ==== Upper Left Styles ==== */
@@ -75,8 +74,7 @@ body, html {
   left: 16px;
 	font-size: 3rem;
   margin-top: 12px;
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
+  opacity: 0.8;
   text-shadow: 1px 0px 8px rgba(150, 150, 150, 0.7);
 }
 
@@ -106,12 +104,11 @@ body, html {
   font-size: 1.8rem;
   padding: 3px 7px 4px 9px;
   border-radius: 4px;
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
+  opacity: 0.8;
   cursor: pointer;
 }
 
-/* Lower left Styles */
+/* === Lower left Styles === */
 
 .bottomleft {
   position: absolute;
@@ -120,8 +117,7 @@ body, html {
   margin-bottom: 4px;
   font-size: 1rem;
   color: #808080;
-  opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
+  opacity: 0.9;
   text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
 }
 
@@ -132,8 +128,7 @@ body, html {
   top: 27%;
   left: 37%;
   text-align: center;
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
+  opacity: 0.8;
   text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
 }
 
@@ -163,20 +158,16 @@ body, html {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(106, 117, 106, 0.2);
-  font-size: 1.1rem;
   max-height: 0;
   overflow: hidden;
-  opacity: 0.7;
-  filter: alpha(opacity=70); /* For IE8 and earlier */
-  text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
+  opacity: 1;
   min-width: 600px;
   text-align: justify;
-  border-radius: 4px; /* box-shadow? */
-  /*border: 1px solid #fff;*/
+  border-radius: 4px;
 }
 
 #content.open {
-  max-height: 48%;
+  max-height: 45%;
 
   -webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
@@ -187,30 +178,13 @@ body, html {
 #content p {
   margin-bottom: 5px;
   padding: 7px;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   line-height: 1.3rem;
+  text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
 }
 
-/*#content p {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  -ms-column-count: 3;
-  -o-column-count: 3;
-  column-count: 3;
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  -ms-column-gap: 20px;
-  -o-column-gap: 20px;
-  column-gap: 20px;
-  -webkit-column-rule: 1px solid #fff;
-  -moz-column-rule: 1px solid #fff;
-  -ms-column-rule: 1px solid #fff;
-  -o-column-rule: 1px solid #fff;
-  column-rule: 1px solid #fff;
-  text-align: justify;
-}*/
-
-/* ==== Lower Right / social-media-icons ==== */
+/* ==== Lower Right Styles / social-media-icons ==== */
 
 .bottomright {
   position: absolute;
@@ -228,14 +202,12 @@ body, html {
 }
 
 .social-media-icons ul li a {
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
+  opacity: 0.8;
   text-align: center;
   line-height: 20px;
   font-size: 3em;
   margin: 0 30px;
   display: block;
-  /*position: relative;*/
   overflow: hidden;
 }
 
@@ -255,8 +227,6 @@ ul li a:hover .fa {
 
 /* === Media Queries landscape === */
 
-/* Large screens ( > 1200px) */
-
 /* Medium screens (iPad, 13" laptop) */
 
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
@@ -267,6 +237,7 @@ ul li a:hover .fa {
   #content {
     top: 17%;
     min-width: 400px;
+    font-size: 16px;
     font-size: 1rem;
     overflow-y: scroll;
   }
@@ -324,11 +295,11 @@ ul li a:hover .fa {
   }
 }
 
-/* small mobile screens (iPhone 5/SE and 4" screens) */
+/* Small mobile screens (iPhone 5/SE and 4" screens) */
 
 @media only screen and (max-width: 568px) and (orientation: landscape) {
   .topleft {
-    font-size: 1.5625rem;
+    font-size: 1.6rem;
   }
 
   #middle h2 {
@@ -359,11 +330,7 @@ ul li a:hover .fa {
   }
 }
 
-/* === Media Queries portrait === */
-
-/* Large screens ( > 1024px) */
-
-
+/* === Media Queries Portrait === */
 
 /* Medium screens (iPad + mini + pro split-screen) */
 
@@ -404,7 +371,7 @@ ul li a:hover .fa {
 
 /* Mobile icons */
 
-@media only screen and (max-width: 550px) { /* (breekpunt icons)*/
+@media only screen and (max-width: 550px) and (orientation: portrait) { /* (breekpunt icons)*/
 
   .bottomright {
     position: absolute;
@@ -428,7 +395,7 @@ ul li a:hover .fa {
 
 /* Mobile screens (iPhone 6 + similar, phablets) */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
    #middle {
      top: 29%;
      left: 50%;
@@ -456,9 +423,9 @@ ul li a:hover .fa {
    }
 }
 
-/* small mobile screens (iPhone 5/SE and 4" screens) */
+/* Small mobile screens (iPhone 5/SE and 4" screens) */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) and (orientation: portrait) {
   .social-media-icons ul li a {
     font-size: 2.5em;
   }
@@ -492,3 +459,34 @@ ul li a:hover .fa {
     font-size: 1rem;
   }
 }
+
+/* Opacity on high resolution screens */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+	only screen and (-o-min-device-pixel-ratio: 13/10),
+	only screen and (min-resolution: 120dpi) {
+
+    .topleft {
+      opacity: 0.5;
+    }
+
+    #button {
+      opacity: 0.5;
+    }
+
+    .bottomleft {
+      opacity: 0.6;
+    }
+
+    #middle {
+      opacity: 0.5;
+    }
+
+    #content {
+      opacity: 0.7;
+    }
+
+    .social-media-icons ul li a {
+      opacity: 0.5;
+    }
+	}
