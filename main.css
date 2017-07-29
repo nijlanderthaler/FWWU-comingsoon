@@ -375,7 +375,7 @@ ul li a:hover .fa {
   }
 
   .bottomleft {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -462,7 +462,7 @@ ul li a:hover .fa {
   }
 
   .bottomleft {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   #content p {
@@ -477,7 +477,7 @@ ul li a:hover .fa {
 	only screen and (min-resolution: 120dpi) {
 
     .topleft {
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     #button {
@@ -485,15 +485,15 @@ ul li a:hover .fa {
     }
 
     .bottomleft {
-      opacity: 0.7;
-    }
-
-    #middle {
       opacity: 0.6;
     }
 
+    #middle {
+      opacity: 0.5;
+    }
+
     #content {
-      opacity: 0.8;
+      opacity: 0.7;
     }
 
     .social-media-icons ul li a {
