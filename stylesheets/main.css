@@ -59,7 +59,7 @@ body, html {
 
 .bgimg {
   background-image: url("../images/fwwu-forest2.jpg");
-	height: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
   color: white;
@@ -72,10 +72,10 @@ body, html {
   position: absolute;
   top: 0;
   left: 16px;
-	font-size: 3rem;
+  font-size: 3rem;
   margin-top: 12px;
   opacity: 0.8;
-  text-shadow: 1px 0px 8px rgba(150, 150, 150, 0.7);
+  text-shadow: 1px 0 8px 0 rgba(150, 150, 150, 0.7);
 }
 
 /* ==== Upper Right Styles ==== */
@@ -86,14 +86,14 @@ body, html {
   right: 16px;
   margin-top: 12px;
   border-radius: 4px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.23), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.23), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .topright:hover {
   right: 15px;
   margin-top: 13px;
   border-radius: 4px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #button {
@@ -164,11 +164,11 @@ body, html {
   min-width: 600px;
   text-align: justify;
   border-radius: 4px;
+  overflow-y: scroll;
 }
 
 #content.open {
-  max-height: 45%;
-
+  max-height: 46%;
   -webkit-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
   -o-transition: max-height 0.5s;
@@ -218,7 +218,7 @@ body, html {
 ul li a .fa {
   position: relative;
   color: #808080;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 ul li a:hover .fa {
@@ -237,7 +237,6 @@ ul li a:hover .fa {
   #content {
     top: 17%;
     min-width: 400px;
-    overflow-y: scroll;
   }
 }
 
@@ -275,7 +274,7 @@ ul li a:hover .fa {
   }
 
   #content {
-    top: 25%;
+    top: 27%;
     left: 16px;
     right: 16px;
     transform: none;
@@ -285,7 +284,7 @@ ul li a:hover .fa {
     max-height: 54%;
   }
 
-  #content p  {
+  #content p {
     margin-bottom: 3px;
     font-size: 1rem;
     letter-spacing: 0.1px;
@@ -325,10 +324,6 @@ ul li a:hover .fa {
 
   #button {
     font-size: 1.7rem;
-  }
-
-  #content {
-    top: 26%;
   }
 
   #content p {
@@ -371,7 +366,6 @@ ul li a:hover .fa {
     right: 16px;
     min-width: 400px;
     transform: none;
-    overflow-y: scroll;
   }
 
   .bottomleft {
@@ -381,7 +375,7 @@ ul li a:hover .fa {
 
 /* Mobile icons */
 
-@media only screen and (max-width: 550px) and (orientation: portrait) { /* (breekpunt icons)*/
+@media only screen and (max-width: 550px) and (orientation: portrait) { /* (breekpunt icons) */
 
   .bottomright {
     position: absolute;
@@ -406,31 +400,31 @@ ul li a:hover .fa {
 /* Mobile screens (iPhone 6 + similar, phablets) */
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-   #middle {
-     top: 29%;
-     left: 50%;
-     transform: translateX(-50%);
-   }
+  #middle {
+    top: 29%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-   #middle h2 {
-     font-size: 1.8rem;
-     margin-bottom: 6px;
-   }
+  #middle h2 {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+  }
 
-   #middle p {
-     font-size: 1.3rem;
-     margin-top: 7px;
-   }
+  #middle p {
+    font-size: 1.3rem;
+    margin-top: 7px;
+  }
 
-   #content {
-     top: 16%;
-     min-width: 200px;
-     text-align: left;
-   }
+  #content {
+    top: 18%;
+    min-width: 200px;
+    text-align: left;
+  }
 
-   #content.open {
-     max-height: 77%;
-   }
+  #content.open {
+    max-height: 77%;
+  }
 }
 
 /* Small mobile screens (iPhone 5/SE and 4" screens) */
@@ -473,30 +467,35 @@ ul li a:hover .fa {
 /* Opacity on high resolution screens */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-	only screen and (-o-min-device-pixel-ratio: 13/10),
-	only screen and (min-resolution: 120dpi) {
+  only screen and (-o-min-device-pixel-ratio: 13/10),
+  only screen and (min-resolution: 120dpi) {
+  .topleft {
+    opacity: 0.6;
+  }
 
-    .topleft {
-      opacity: 0.6;
-    }
+  #button {
+    opacity: 0.5;
+  }
 
-    #button {
-      opacity: 0.5;
-    }
+  .bottomleft {
+    opacity: 0.7;
+  }
 
-    .bottomleft {
-      opacity: 0.7;
-    }
+  #middle {
+    opacity: 0.6;
+  }
 
-    #middle {
-      opacity: 0.6;
-    }
+  #content {
+    opacity: 0.8;
+  }
 
-    #content {
-      opacity: 0.8;
-    }
+  .social-media-icons ul li a {
+    opacity: 0.5;
+  }
+}
 
-    .social-media-icons ul li a {
-      opacity: 0.5;
-    }
-	}
+/* preventing iPhones from inappropriate font size adjustment in landscape mode */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  body { -webkit-text-size-adjust: none; }
+}
